@@ -5,9 +5,9 @@ import { gitPlugin } from '@vuepress/plugin-git';
 export default defineUserConfig({
   lang: 'zh-CN',
   // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
-  title: '挺拉的首页',
+  title: '挺拉的收纳箱',
   // meta 中的描述文字，用于SEO
-  description: '挺拉的的前端记录',
+  description: '挺拉的的收纳箱',
   // 注入到当前页面的 HTML <head> 中的标签
   head: [
     ['link',
@@ -46,11 +46,11 @@ export default defineUserConfig({
       { 
         text: '前端', 
         link: '/pages/front-end/',
-        children: [
-          { text: '包管理工具', link: '/pages/front-end/package.md' },
-        ]
+        // children: [
+        //   { text: '包管理工具', link: '/pages/front-end/package.md' },
+        // ]
       },
-      { text: '其他', link: '/pages/others/'},
+      { text: '分享', link: '/pages/share/'},
     ],
     // 可折叠的侧边栏
     sidebar: {
@@ -58,6 +58,9 @@ export default defineUserConfig({
         {
           text: '日常',
           link: '/pages/daily/',
+          children: [
+            { text: '第一次小记', link: '/pages/daily/description.md'}
+          ]
         },
       ],
       '/pages/front-end/': [
@@ -69,10 +72,10 @@ export default defineUserConfig({
           ],
         },
       ],
-      '/pages/others/': [
+      '/pages/share/': [
         {
-          text: '其他',
-          link: '/pages/others/',
+          text: '分享',
+          link: '/pages/share/',
         },
       ],
     },
