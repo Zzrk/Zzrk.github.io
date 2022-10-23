@@ -68,7 +68,13 @@ export default defineUserConfig({
           text: '前端',
           link: '/pages/front-end/',
           children: [
-            { text: '包管理工具', link: '/pages/front-end/package.md' }
+            { text: '包管理工具', link: '/pages/front-end/包管理工具.md' },
+            { text: '响应式布局', link: '/pages/front-end/响应式布局.md' },
+            { text: '正则表达式', link: '/pages/front-end/正则表达式/正则表达式.md' },
+            { text: 'ES6 - Class 的基本语法', link: '/pages/front-end/ES6 - Class 的基本语法.md' },
+            { text: '原型与原型链', link: '/pages/front-end/原型与原型链/原型与原型链.md' },
+            { text: '执行上下文、作用域、闭包', link: '/pages/front-end/执行上下文、作用域、闭包.md' },
+            { text: 'linux 命令', link: '/pages/front-end/linux 命令.md' },
           ],
         },
       ],
@@ -76,6 +82,14 @@ export default defineUserConfig({
         {
           text: '分享',
           link: '/pages/share/',
+          children: [
+            // { text: '小王子', link: '/pages/share/小王子.md' },
+            // { text: '法制的细节', link: '/pages/share/法制的细节.md' },
+            // { text: 'vue.js设计与实现', link: '/pages/share/vue.js设计与实现.md' },
+            // { text: '请回答1988', link: '/pages/share/请回答1988.md' },
+            // { text: '机智的医生生活', link: '/pages/share/机智的医生生活.md' },
+            // { text: '赛马娘', link: '/pages/share/赛马娘.md' },
+          ]
         },
       ],
     },
