@@ -1,5 +1,4 @@
 import { defineUserConfig, defaultTheme } from 'vuepress';
-import anchor from 'markdown-it-anchor';
 import { gitPlugin } from '@vuepress/plugin-git';
 
 export default defineUserConfig({
