@@ -1,0 +1,1 @@
+import{_ as e,o as _,c}from"./app.1dfceebc.js";const t={};function o(r,s){return _(),c("div")}const a=e(t,[["render",o],["__file","vue.js\u8BBE\u8BA1\u4E0E\u5B9E\u73B0.html.vue"]]);export{a as default};

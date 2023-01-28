@@ -1,0 +1,43 @@
+import{_ as t,r as i,o as l,c as o,a as n,d as e,b as s,e as c}from"./app.1dfceebc.js";const p={},r=n("h1",{id:"linux-\u547D\u4EE4",tabindex:"-1"},[n("a",{class:"header-anchor",href:"#linux-\u547D\u4EE4","aria-hidden":"true"},"#"),s(" linux \u547D\u4EE4")],-1),d={href:"https://juejin.cn/post/7044099175838908424",target:"_blank",rel:"noopener noreferrer"},u=s("https://juejin.cn/post/7044099175838908424"),m={href:"https://juejin.cn/post/6917096816118857736",target:"_blank",rel:"noopener noreferrer"},v=s("https://juejin.cn/post/6917096816118857736"),b={href:"https://www.yuque.com/attachments/yuque/0/2022/pdf/27121735/1663143187830-355b8e99-bb91-49b7-9a03-9e033bcf16d5.pdf?_lake_card=%7B%22src%22%3A%22https%3A%2F%2Fwww.yuque.com%2Fattachments%2Fyuque%2F0%2F2022%2Fpdf%2F27121735%2F1663143187830-355b8e99-bb91-49b7-9a03-9e033bcf16d5.pdf%22%2C%22name%22%3A%22linux.pdf%22%2C%22size%22%3A2390943%2C%22type%22%3A%22application%2Fpdf%22%2C%22ext%22%3A%22pdf%22%2C%22source%22%3A%22%22%2C%22status%22%3A%22done%22%2C%22mode%22%3A%22title%22%2C%22download%22%3Atrue%2C%22taskId%22%3A%22u8922eee8-df4d-4154-8bc1-415f49e43ba%22%2C%22taskType%22%3A%22upload%22%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22u4188a959%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%2C%22card%22%3A%22file%22%7D",target:"_blank",rel:"noopener noreferrer"},h=s("linux.pdf"),k=c(`<div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token function">sudo</span> yum <span class="token function">install</span> gcc-c++
+<span class="token function">sudo</span> yum <span class="token function">install</span> <span class="token parameter variable">-y</span> pcre pcre-devel
+<span class="token function">sudo</span> yum <span class="token function">install</span> <span class="token parameter variable">-y</span> zlib zlib-devel
+<span class="token function">sudo</span> yum <span class="token function">install</span> <span class="token parameter variable">-y</span> openssl openssl-devel
+
+<span class="token comment"># \u4E0A\u4F20 nginx \u5230 downloads \u6587\u4EF6\u5939\u540E</span>
+
+<span class="token function">tar</span> <span class="token parameter variable">-xvf</span> nginx-1.22.0.tar.gz
+<span class="token builtin class-name">cd</span> nginx-1.22.0
+./configure <span class="token parameter variable">--prefix</span><span class="token operator">=</span>/usr/local/nginx --pid-path<span class="token operator">=</span>/var/run/nginx/nginx.pid --lock-path<span class="token operator">=</span>/var/lock/nginx.lock --error-log-path<span class="token operator">=</span>/var/log/nginx/error.log --http-log-path<span class="token operator">=</span>/var/log/nginx/access.log --with-http_gzip_static_module --http-client-body-temp-path<span class="token operator">=</span>/var/temp/nginx/client --http-proxy-temp-path<span class="token operator">=</span>/var/temp/nginx/proxy --http-fastcgi-temp-path<span class="token operator">=</span>/var/temp/nginx/fastcgi --http-uwsgi-temp-path<span class="token operator">=</span>/var/temp/nginx/uwsgi --http-scgi-temp-path<span class="token operator">=</span>/var/temp/nginx/scgi --with-http_stub_status_module --with-http_ssl_module --with-file-aio --with-http_realip_module
+<span class="token function">make</span>
+<span class="token function">sudo</span> <span class="token function">make</span> <span class="token function">install</span>
+
+<span class="token comment"># which nginx</span>
+<span class="token comment"># ll /usr/local/nginx/sbin/nginx</span>
+<span class="token comment"># \u9700\u8981\u521B\u5EFA\u8F6F\u94FE\u63A5</span>
+
+<span class="token function">sudo</span> <span class="token function">ln</span> <span class="token parameter variable">-s</span> /usr/local/nginx/sbin/nginx /usr/sbin/nginx
+<span class="token function">which</span> nginx
+
+<span class="token comment"># \u521B\u5EFA\u4E34\u65F6\u6587\u4EF6\u76EE\u5F55\uFF0C-p \u8868\u793A\u7EA7\u8054\u521B\u5EFA</span>
+
+<span class="token function">sudo</span> <span class="token function">mkdir</span> <span class="token parameter variable">-p</span> /var/temp/nginx/client
+<span class="token function">sudo</span> nginx
+
+<span class="token comment"># \u5F00\u653E 80 \u7AEF\u53E3</span>
+<span class="token function">sudo</span> firewall-cmd --add-port<span class="token operator">=</span><span class="token number">80</span>/tcp <span class="token parameter variable">--permanent</span> <span class="token parameter variable">--zone</span><span class="token operator">=</span>public
+<span class="token function">sudo</span> firewall-cmd <span class="token parameter variable">--reload</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># \u547D\u4EE4\u524D\u6DFB\u52A0 sudo \u4EE5\u7CFB\u7EDF\u7BA1\u7406\u8005\u7684\u8EAB\u4EFD\u6267\u884C\u6307\u4EE4\uFF08\u76F8\u5F53\u4E8E root\uFF09</span>
+<span class="token comment"># sudo !! (\u4EE5 sudo \u6267\u884C\u4E0A\u4E00\u6761\u6307\u4EE4)</span>
+
+<span class="token comment"># reboot \u540E\u518D\u6B21\u91CD\u542F nginx \u4F1A\u62A5\u9519 </span>
+<span class="token comment"># nginx: [error] open() &quot;/var/run/nginx/nginx.pid&quot; failed (2: No such file or directory)</span>
+<span class="token function">mkdir</span> /var/run/nginx/
+
+<span class="token comment"># 403</span>
+<span class="token comment"># https://www.php.cn/nginx/423622.html</span>
+<span class="token comment"># \u6CE8\u610F nginx.conf \u6587\u4EF6\u4E2D\u5BF9\u5DE5\u4F5C\u7528\u6237\u7684\u8BBE\u7F6E\u6CA1\u6709\u6CE8\u91CA</span>
+
+<span class="token comment"># nginx: [error] invalid PID number &quot;&quot; in &quot;/run/nginx.pid&quot;</span>
+<span class="token comment"># https://blog.csdn.net/qq_29695701/article/details/110150823</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,2),_={href:"https://juejin.cn/post/7037022688493338661",target:"_blank",rel:"noopener noreferrer"},g=s("gitlab ci/cd"),f={href:"https://zhuanlan.zhihu.com/p/438694636",target:"_blank",rel:"noopener noreferrer"},x=s("https://zhuanlan.zhihu.com/p/438694636"),w=s(),A=n("br",null,null,-1),y=s(" \u786C\u94FE\u63A5\uFF1A\u6709\u70B9\u50CF js \u7684\u5F15\u7528\u6570\u636E\u7C7B\u578B\uFF0C\u5F53\u5220\u9664\u6E90\u6587\u4EF6\u65F6\uFF0C\u786C\u94FE\u63A5\u6587\u4EF6\u4ECD\u7136\u53EF\u7528\u3002\uFF08\u540C\u4E00\u6587\u4EF6\u7CFB\u7EDF\u4E0B\u7684\u6587\u4EF6\uFF09 "),C=n("br",null,null,-1),q=s(" \u8F6F\u94FE\u63A5\uFF08\u7B26\u53F7\u94FE\u63A5\uFF09\uFF1A\u6709\u70B9\u50CF\u521B\u5EFA\u5FEB\u6377\u65B9\u5F0F\uFF0C\u5F53\u5220\u9664\u6E90\u6587\u4EF6\u65F6\uFF0C\u8F6F\u94FE\u63A5\u6587\u4EF6\u4ECD\u7136\u663E\u793A\uFF0C\u4F46\u662F\u53D8\u6210\u4E86\u6B7B\u94FE\u63A5\uFF0C\u5176\u5B9E\u5DF2\u7ECF\u4E0D\u5B58\u5728\u4E86\u3002\uFF08\u4EFB\u610F\u6587\u4EF6\u7CFB\u7EDF\u4E0B\u7684\u6587\u4EF6\u6216\u76EE\u5F55\uFF09");function j(z,F){const a=i("ExternalLinkIcon");return l(),o("div",null,[r,n("p",null,[n("a",d,[u,e(a)])]),n("p",null,[n("a",m,[v,e(a)])]),n("p",null,[n("a",b,[h,e(a)])]),k,n("p",null,[n("a",_,[g,e(a)])]),n("p",null,[n("a",f,[x,e(a)]),w,A,y,C,q])])}const N=t(p,[["render",j],["__file","linux \u547D\u4EE4.html.vue"]]);export{N as default};
