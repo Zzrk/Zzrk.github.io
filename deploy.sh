@@ -2,7 +2,7 @@
 set -e
 
 # 打包生成静态文件
-pnpm docs:build
+pnpm build
 
 # 进入打包好的文件夹
 cd docs/.vuepress/dist
