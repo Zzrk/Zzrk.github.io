@@ -74,7 +74,7 @@ export default defineUserConfig({
             { text: '原型与原型链', link: '/pages/front-end/原型与原型链/原型与原型链.md' },
             { text: '执行上下文、作用域、闭包', link: '/pages/front-end/执行上下文、作用域、闭包.md' },
             { text: 'linux 命令', link: '/pages/front-end/linux 命令.md' },
-            { text: 'Tiptap', link: '/pages/front-end/Tiptap/Tiptap.md' },
+            { text: 'Tiptap（by Prosemirror）', link: '/pages/front-end/Tiptap/Tiptap（by Prosemirror）.md' },
           ],
         },
       ],
