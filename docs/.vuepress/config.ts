@@ -41,15 +41,15 @@ export default defineUserConfig({
     docsDir: 'docs',
     navbar: [
       { text: '首页', link: '/' },
-      { text: '日常', link: '/pages/daily/'},
-      { 
-        text: '前端', 
+      { text: '日常', link: '/pages/daily/' },
+      {
+        text: '前端',
         link: '/pages/front-end/',
         // children: [
         //   { text: '包管理工具', link: '/pages/front-end/package.md' },
         // ]
       },
-      { text: '分享', link: '/pages/share/'},
+      { text: '分享', link: '/pages/share/' },
     ],
     // 可折叠的侧边栏
     sidebar: {
@@ -58,7 +58,7 @@ export default defineUserConfig({
           text: '日常',
           link: '/pages/daily/',
           children: [
-            { text: '第一次小记', link: '/pages/daily/description.md'}
+            { text: '第一次小记', link: '/pages/daily/description.md' }
           ]
         },
       ],
@@ -74,6 +74,7 @@ export default defineUserConfig({
             { text: '原型与原型链', link: '/pages/front-end/原型与原型链/原型与原型链.md' },
             { text: '执行上下文、作用域、闭包', link: '/pages/front-end/执行上下文、作用域、闭包.md' },
             { text: 'linux 命令', link: '/pages/front-end/linux 命令.md' },
+            { text: 'Tiptap', link: '/pages/front-end/Tiptap/Tiptap.md' },
           ],
         },
       ],
@@ -81,14 +82,7 @@ export default defineUserConfig({
         {
           text: '分享',
           link: '/pages/share/',
-          children: [
-            // { text: '小王子', link: '/pages/share/小王子.md' },
-            // { text: '法制的细节', link: '/pages/share/法制的细节.md' },
-            // { text: 'vue.js设计与实现', link: '/pages/share/vue.js设计与实现.md' },
-            // { text: '请回答1988', link: '/pages/share/请回答1988.md' },
-            // { text: '机智的医生生活', link: '/pages/share/机智的医生生活.md' },
-            // { text: '赛马娘', link: '/pages/share/赛马娘.md' },
-          ]
+          children: []
         },
       ],
     },
