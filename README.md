@@ -2,7 +2,6 @@
 
 #### 开发：
 pnpm i
-
 pnpm run dev
 
 #### 部署:
@@ -17,16 +16,21 @@ arco design and motion
 
 #### tiptap-extensions
 Highlight 替换 BackgroundColor
+
 Table 相关（BubbleMenu 有问题）
+
 思维导图，流程图，绘图
 
 #### blog
 Portals 解决 keep-alive 问题
+
 setState 不同用法问题
+
+tailwind 不使用冲突的样式
 
 #### 工程化
 另起项目打包成组件
-发布 npm 包
-构建组件库
 
-#### 封装 chrome-tabs
+发布 npm 包
+
+构建组件库
