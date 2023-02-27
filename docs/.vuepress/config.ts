@@ -42,6 +42,7 @@ export default defineUserConfig({
     navbar: [
       { text: '首页', link: '/' },
       { text: '日常', link: '/pages/daily/' },
+      { text: '计算机基础', link: '/pages/basis/' },
       {
         text: '前端',
         link: '/pages/front-end/',
@@ -59,6 +60,15 @@ export default defineUserConfig({
           link: '/pages/daily/',
           children: [
             { text: '第一次小记', link: '/pages/daily/description.md' }
+          ]
+        },
+      ],
+      '/pages/basis/': [
+        {
+          text: '计算机基础',
+          link: '/pages/basis/',
+          children: [
+            { text: '计算机组成原理', link: '/pages/basis/composition' }
           ]
         },
       ],
