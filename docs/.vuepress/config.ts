@@ -68,7 +68,16 @@ export default defineUserConfig({
           text: '计算机基础',
           link: '/pages/basis/',
           children: [
-            { text: '计算机组成原理', link: '/pages/basis/composition' }
+            {
+              text: '计算机组成原理',
+              link: '/pages/basis/composition',
+              children: [
+                {
+                  text: 'P2 计算机组成原理',
+                  link: '/pages/basis/composition/p2.md'
+                }
+              ]
+            }
           ]
         },
       ],
